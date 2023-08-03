@@ -1,0 +1,22 @@
+name: build
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run KhulnaSoft Build Security
+        uses: khulnasoft-labs/build-security-action@main
+        with:
+          khulnasoft_cspm_url: https://stage.api.cloudsploit.com/v2/tokens
+          khulnasoft_api_url: https://api-dev.khulnasoft.com/v2/iac
+          khulnasoft_key: ${ secret.KHULNASOFT_KEY }
+          khulnasoft_secret: ${ secret.KHULNASOFT_SECRET }
