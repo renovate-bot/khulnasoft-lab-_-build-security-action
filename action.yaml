@@ -1,22 +1,22 @@
 name: "KhulnaSoft Build Security"
-description: "Vul scanner with upload to to KhulnaSoft Build Security"
+description: "Trivy scanner with upload to to Aquasec Build Security"
 author: "KhulnaSoft Security"
 inputs:
-  khulnasoft_key:
-    description: "Your KHULNASOFT_KEY provided by CSPM"
+  aqua_key:
+    description: "Your AQUA_KEY provided by CSPM"
     required: true
-  khulnasoft_secret:
-    description: "Your KHULNASOFT_SECRET provided by CSPM"
+  aqua_secret:
+    description: "Your AQUA_SECRET provided by CSPM"
     required: true
   build:
     description: "The logical name for the build system. Defaults to GitHubAction"
     required: false
     default: GitHubAction
-  khulnasoft_api_url:
-    description: "The KhulnaSoft API endpoint to report results to"
+  aqua_api_url:
+    description: "The Aqua API endpoint to report results to"
     required: false
-    default:  https://api.khulnasoft.com/v2/iac
-  khulnasoft_cspm_url:
+    default:  https://api.aquasec.com/v2/iac
+  aqua_cspm_url:
     description: "The Atlas endpoint to report results to"
     required: false
     default: https://stage.api.cloudsploit.com/v2/tokens
