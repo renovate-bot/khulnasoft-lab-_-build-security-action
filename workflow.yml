@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run KhulnaSoft Build Security
-        uses: khulnasoft-labs/build-security-action@main
+        uses: khulnasoft/build-security-action@main
         with:
-          khulnasoft_cspm_url: https://stage.api.cloudsploit.com/v2/tokens
-          khulnasoft_api_url: https://api-dev.khulnasoft.com/v2/iac
-          khulnasoft_key: ${ secret.KHULNASOFT_KEY }
-          khulnasoft_secret: ${ secret.KHULNASOFT_SECRET }
+          aqua_cspm_url: https://stage.api.cloudsploit.com/v2/tokens
+          aqua_api_url: https://api-dev.aquasec.com/v2/iac
+          aqua_key: ${ secret.AQUA_KEY }
+          aqua_secret: ${ secret.AQUA_SECRET }
