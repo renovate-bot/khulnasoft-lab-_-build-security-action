@@ -1,4 +1,4 @@
-FROM khulnasoft/vul:latest
+FROM aquasec/trivy:0.21.0
 
 COPY entrypoint.sh /
 
